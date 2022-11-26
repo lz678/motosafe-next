@@ -6,7 +6,11 @@ module.exports = () => {
         ...withLess({
             lessLoaderOptions: {},
         }),
-        // i18n: {
+        // basePath: '/',
+        reactStrictMode: true,
+        swcMinify: true
+        // i18n:
+        // {
         //     locales: ['cn', 'de', 'en', 'es', 'fr', 'jp', 'pt', 'tw', 'it'],
         //     defaultLocale: 'en',
         // },

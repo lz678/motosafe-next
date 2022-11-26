@@ -1,6 +1,6 @@
 import axios from 'axios'
 //设置全局请求路径
-axios.defaults.baseURL = 'http://www.motosafe.xyz:3000/'
+axios.defaults.baseURL = 'http://www.motosafe.xyz:3000'
 //设置请求超时时间
 axios.defaults.timeout = 10000
 // const reg = /^(http|https)/
