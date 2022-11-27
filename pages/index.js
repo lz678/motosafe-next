@@ -14,6 +14,7 @@ export default function Index() {
         <div className={styles.container}>
             <Head>
                 <title>放心骑</title>
+                <meta name="baidu-site-verification" content="code-BtSgOThgFs" />
                 <meta name="description" content="专业的摩托车保险"/>
                 <meta name="keywords" content="如何买摩托车保险,摩托车保险,摩托车险,专业摩托车保险,摩托车交强险,摩托车三者险,摩托车盗抢险,交强险,三者险,盗抢险"/>
                 <link rel="icon" href="/LOGO.png"/>
