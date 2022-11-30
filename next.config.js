@@ -7,7 +7,7 @@ module.exports = () => {
             lessLoaderOptions: {},
         }),
         // basePath: '/',
-        reactStrictMode: true,
+        reactStrictMode: false,
         swcMinify: true
         // i18n:
         // {

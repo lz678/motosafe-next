@@ -7,7 +7,8 @@ import mainAction from '../../redux/action/mainAction'
 import backgroundTwo from '../../assets/moto_two.webp'
 import Image from 'next/image'
 
-const Insurance = () => {
+const Insurance = (props) => {
+    let {insuranceData}=props
     let dispatch = useDispatch()
     const [name, setName] = useState('')
     const [car, serCar] = useState('')
@@ -87,7 +88,6 @@ const Insurance = () => {
                 <div className={Style.introduce_box}>
                     <span className={Style.look_for}>Look for us!</span>
                     <h1 className={Style.h_title}>专业摩托车保险</h1>
-                    {/* <span className={Style.select}>交强 | 三者</span> */}
                     <span className={Style.desc}>
                         我们将会为您提供办理摩托车保险的业务<br/>专人一对一服务，给出最专业意见和建议
                     </span>
@@ -144,20 +144,19 @@ const Insurance = () => {
                                 />
                             </svg>
                         </div>
-
                         <span className={Style.tip_text}>
-                            提交成功后，工作人员会在1~2天内电话联系您！
+                            提交成功后，工作人员会在短时间内联系您！
                         </span>
-
                     </div>
                     <div className={Style.submit} onClick={_submit}>
                         提交
                     </div>
+                    <div className={Style.insurance_num}>累计给{insuranceData[0].num}位骑士提供服务</div>
                 </div>
-
 
             </div>
         </div>
     )
 }
+
 export default Insurance
