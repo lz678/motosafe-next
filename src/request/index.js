@@ -16,16 +16,10 @@ axios.interceptors.request.use(
     }
 )
 
-
 //axios响应拦截器
-// axios.interceptors.response.use(
-//     res => {
-//         let code = res.code
-//         if (code === 1001) {
-//         }
-//         else {
-//             return res.data
-//         }
-//     }
-// )
+axios.interceptors.response.use(
+    res => {
+            return res.data
+    }
+)
 export default axios

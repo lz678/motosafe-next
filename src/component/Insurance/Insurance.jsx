@@ -9,6 +9,7 @@ import Image from 'next/image'
 
 const Insurance = (props) => {
     let {insuranceData}=props
+    // console.log(insuranceData)
     let dispatch = useDispatch()
     const [name, setName] = useState('')
     const [car, serCar] = useState('')
