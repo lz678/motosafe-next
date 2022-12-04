@@ -8,18 +8,19 @@ import backgroundTwo from '../../assets/moto_two.webp'
 import Image from 'next/image'
 
 const Insurance = (props) => {
-    let {insuranceData}=props
-    // console.log(insuranceData)
+    let {insuranceData} = props
     let dispatch = useDispatch()
     const [name, setName] = useState('')
     const [car, serCar] = useState('')
     const [phone, setPhone] = useState('')
+    const [num, setNum] = useState(null)
 
     let nameRef = useRef(null)
     let carRef = useRef(null)
     let phoneRef = useRef(null)
     useEffect(() => {
         _addCount()
+        // _getInsuranceData()
     }, [])
     let _addCount = () => {
         try {
@@ -28,6 +29,17 @@ const Insurance = (props) => {
             MTNetwork.addCount({model})
         } catch (error) {
             console.log(error);
+        }
+    }
+    let _getInsuranceData = () => {
+        try {
+            MTNetwork.getInsurance().then((res) => {
+                let list = res.data
+                let curNum = list[0].num
+                setNum(curNum)
+            })
+        } catch (e) {
+            setNum(899)
         }
     }
     let _nameChange = (value) => {
@@ -90,7 +102,7 @@ const Insurance = (props) => {
                     <span className={Style.look_for}>Look for us!</span>
                     <h1 className={Style.h_title}>专业摩托车保险</h1>
                     <span className={Style.desc}>
-                        我们将会为您提供办理摩托车保险的业务<br/>专人一对一服务，给出最专业意见和建议
+                        我们将会为您提供办理摩托车保险的业务<br/>专人一对一服务 给出最专业意见和建议
                     </span>
                 </div>
 
@@ -133,15 +145,17 @@ const Insurance = (props) => {
                                      200.064292 446.016611 446.016611S757.952318 958.016611 512 958.016611zM512
                                       129.983389c-210.655557 0-382.016611 171.359333-382.016611 382.016611 0 210.624593
                                        171.359333 382.016611 382.016611 382.016611 210.624593 0 382.016611-171.359333
-                                        382.016611-382.016611S722.624593 129.983389 512 129.983389z" p-id="2790" fill="#ffffff"
-                                            />
+                                        382.016611-382.016611S722.624593 129.983389 512 129.983389z" p-id="2790"
+                                      fill="#ffffff"
+                                />
                                 <path d="M463.99957 304.00043c0 26.509985 21.490445 48.00043 48.00043 48.00043s48.00043-21.490445
                                  48.00043-48.00043-21.490445-48.00043-48.00043-48.00043S463.99957 277.490445 463.99957
                                  304.00043z" p-id="2791" fill="#ffffff"
                                 />
                                 <path d="M512 768c-17.664722 0-32.00086-14.303454-32.00086-32.00086L479.99914 
                                     448c0-17.664722 14.336138-32.00086 32.00086-32.00086s32.00086 14.336138 32.00086
-                                    32.00086l0 287.99914C544.00086 753.696546 529.664722 768 512 768z" p-id="2792" fill="#ffffff"
+                                    32.00086l0 287.99914C544.00086 753.696546 529.664722 768 512 768z" p-id="2792"
+                                      fill="#ffffff"
                                 />
                             </svg>
                         </div>
@@ -152,9 +166,8 @@ const Insurance = (props) => {
                     <div className={Style.submit} onClick={_submit}>
                         提交
                     </div>
-                    <div className={Style.insurance_num}>累计给{insuranceData[0].num}位骑士提供服务</div>
+                    {insuranceData && <div className={Style.insurance_num}>累计给{insuranceData.data[0].num}位骑士提供服务</div>}
                 </div>
-
             </div>
         </div>
     )

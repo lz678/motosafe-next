@@ -6,30 +6,30 @@ import SuccessPanel from "../src/component/SuccessPanel/SuccessPannel";
 import {useSelector} from "react-redux";
 import MTNetwork from "../src/network/MTNetwork";
 
-export async function getStaticProps() {
-    // let insuranceData = await MTNetwork.getInsurance()
-    // let insuranceData = {}
-    let insuranceData = await MTNetwork.getInsurance()
-    if (insuranceData && insuranceData.data) {
+export async function getServerSideProps({ req, res }) {
+    res.setHeader(
+        'Cache-Control',
+        'no-cache, no-store, max-age=0, must-revalidate'
+        // 'public, s-maxage=10, stale-while-revalidate=59'
+    )
+    let DATA = await MTNetwork.getInsurance();
+    if (!DATA) {
         return {
             props: {
-                insuranceData: insuranceData.data
-            },
-            // revalidate: 1000,
+                notFound: true
+            }
         }
     } else {
         return {
             props: {
-                insuranceData: [{num: 0}]
-            },
-            // revalidate: 1000,
-        }
+                insuranceData: DATA
+            }
+        };
     }
-
 }
 
 export default function Index(props) {
-    let {insuranceData} = props
+    let {insuranceData} = props;
     let {showSuccessPanel} = useSelector((store) => {
         return {
             showSuccessPanel: store.mainReducer.showSuccessPanel
