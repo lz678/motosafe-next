@@ -102,7 +102,7 @@ const Insurance = (props) => {
                     <span className={Style.look_for}>Look for us!</span>
                     <h1 className={Style.h_title}>专业摩托车保险</h1>
                     <span className={Style.desc}>
-                        我们将会为您提供办理摩托车保险的业务<br/>专人一对一服务 给出最专业意见和建议
+                        我们将会为您提供办理摩托车保险的业务<br/>专人一对一服务 给出最专业意见和建议<br/>交强险  三者险  盗抢险  车损险
                     </span>
                 </div>
 
@@ -166,7 +166,7 @@ const Insurance = (props) => {
                     <div className={Style.submit} onClick={_submit}>
                         提交
                     </div>
-                    {insuranceData && <div className={Style.insurance_num}>累计给{insuranceData.data[0].num}位骑士提供服务</div>}
+                    {insuranceData && insuranceData.data && <div className={Style.insurance_num}>累计给{insuranceData.data[0].num}位骑士提供服务</div>}
                 </div>
             </div>
         </div>
