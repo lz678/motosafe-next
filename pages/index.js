@@ -3,6 +3,7 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Insurance from "../src/component/Insurance/Insurance";
 import SuccessPanel from "../src/component/SuccessPanel/SuccessPannel";
+import Apply from "../src/component/Apply/Apply"
 import {useSelector} from "react-redux";
 import MTNetwork from "../src/network/MTNetwork";
 
@@ -66,15 +67,16 @@ export default function Index(props) {
     }
     return (
         <div className={styles.container}>
-            <Head>
-                <title>摩安保_摩托车保险_摩托车商业险</title>
-                <meta name="description" content="提供在线办理摩托车保险业务，办理摩托车交强险，三者险和盗抢险"/>
-                <meta name="keywords" content="如何购买摩托车保险,成都摩托车保险在哪里买,摩托车保险在哪里买,摩托车保险,摩托车交强险,摩托车三者险,摩托车盗抢险"/>
-                <meta name="baidu-site-verification" content="code-BtSgOThgFs"/>
-                <link rel="icon" href="/LOGO.png"/>
-            </Head>
-            <Insurance insuranceData={insuranceData}/>
-            {showSuccessPanel && <SuccessPanel/>}
+            {/*<Head>*/}
+            {/*    <title>摩安保_摩托车保险_摩托车商业险</title>*/}
+            {/*    <meta name="description" content="提供在线办理摩托车保险业务，办理摩托车交强险，三者险和盗抢险"/>*/}
+            {/*    <meta name="keywords" content="如何购买摩托车保险,成都摩托车保险在哪里买,摩托车保险在哪里买,摩托车保险,摩托车交强险,摩托车三者险,摩托车盗抢险"/>*/}
+            {/*    <meta name="baidu-site-verification" content="code-BtSgOThgFs"/>*/}
+            {/*    <link rel="icon" href="/LOGO.png"/>*/}
+            {/*</Head>*/}
+            {/*<Insurance insuranceData={insuranceData}/>*/}
+            {/*{showSuccessPanel && <SuccessPanel/>}*/}
+            <Apply/>
         </div>
     )
 }
