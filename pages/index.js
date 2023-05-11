@@ -77,7 +77,7 @@ export default function Index(props) {
             {/*<Insurance insuranceData={insuranceData}/>*/}
             {/*{showSuccessPanel && <SuccessPanel/>}*/}
             <Head>
-                <title>摩安保</title>
+                <title>个人兴趣爱好分享</title>
                 {/*<meta name="description" content="提供在线办理摩托车保险业务，办理摩托车交强险，三者险和盗抢险"/>*/}
                 {/*<meta name="keywords" content="如何购买摩托车保险,成都摩托车保险在哪里买,摩托车保险在哪里买,摩托车保险,摩托车交强险,摩托车三者险,摩托车盗抢险"/>*/}
                 <meta name="baidu-site-verification" content="code-BtSgOThgFs"/>
