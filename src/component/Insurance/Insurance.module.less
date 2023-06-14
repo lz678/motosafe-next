@@ -7,11 +7,19 @@
 .left_content {
   width: 60%;
   height: 100%;
+  position: relative;
   overflow: hidden;
 
   img {
     width: 100%;
     height: auto;
+  }
+  .ICP {
+    position: absolute;
+    left: 20px;
+    bottom: 14px;
+    color: #ffffff;
+    font-size: 14px;
   }
 }
 
@@ -32,21 +40,17 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.9);
   overflow-y: auto;
-}
-
-.header_box {
-  display: none;
-  width: 100%;
-  height: 60px;
-  background-color: #FF822C;
-  background: linear-gradient(to right,
-  rgb(198, 255, 221),
-  rgb(251, 215, 134),
-  rgb(247, 121, 125));
-  text-align: center;
-  line-height: 60px;
-  color: #fff;
-  font-size: 20px;
+  .ICP {
+    position: absolute;
+    left: 50%;
+    bottom: 40px;
+    transform: translateX(-50%);
+    color: #ffffff;
+    display: none;
+    width: max-content;
+    margin: 0 auto;
+    font-size: 14px;
+  }
 }
 
 .introduce_box {
@@ -201,8 +205,7 @@
     width: 100%;
     overflow: scroll;
     padding: 0 0 20px 0;
-
-    .header_box {
+    .ICP {
       display: block;
     }
   }

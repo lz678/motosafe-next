@@ -95,6 +95,7 @@ const Insurance = (props) => {
         <div className={Style.home_box} id='home_box_id'>
             <div className={Style.left_content}>
                 <Image src={backgroundTwo} alt='摩托车保险' loading='lazy'/>
+                <a href="https://beian.miit.gov.cn/" target="_blank" className={Style.ICP}>蜀ICP备2022027478号-1</a>
             </div>
             <div className={Style.right_content}>
 
@@ -168,6 +169,7 @@ const Insurance = (props) => {
                     </div>
                     {insuranceData && insuranceData.data && <div className={Style.insurance_num}>累计给{insuranceData.data[0].num}位骑士提供服务</div>}
                 </div>
+                <a href="https://beian.miit.gov.cn/" target="_blank" className={Style.ICP}>蜀ICP备2022027478号-1</a>
             </div>
         </div>
     )
