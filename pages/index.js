@@ -74,14 +74,9 @@ export default function Index(props) {
                 <meta name="baidu-site-verification" content="code-BtSgOThgFs"/>
                 <link rel="icon" href="/motosafe.svg"/>
             </Head>
-            <Insurance insuranceData={insuranceData}/>
-            {showSuccessPanel && <SuccessPanel/>}
-            {/*<Head>*/}
-            {/*    <title>个人兴趣爱好分享</title>*/}
-            {/*    <meta name="baidu-site-verification" content="code-BtSgOThgFs"/>*/}
-            {/*    <link rel="icon" href="/LOGO.png"/>*/}
-            {/*</Head>*/}
-            {/*<Apply/>*/}
+            {/*<Insurance insuranceData={insuranceData}/>*/}
+            {/*{showSuccessPanel && <SuccessPanel/>}*/}
+            <Apply/>
         </div>
     )
 }
