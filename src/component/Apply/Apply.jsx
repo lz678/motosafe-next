@@ -1,5 +1,20 @@
 import Style from './Apply.module.less'
+import {useEffect} from "react";
+import MTNetwork from "../../network/MTNetwork";
 let Apply = ()=>{
+    useEffect(() => {
+        _addCount()
+        // _getInsuranceData()
+    }, [])
+    let _addCount = () => {
+        try {
+            let userAgent = window.navigator.userAgent
+            let model = userAgent.match(/\(.*?\)/)[0]
+            MTNetwork.addCount({model})
+        } catch (error) {
+            console.log(error);
+        }
+    }
     return (
         <div className={Style.bbox}>
             {/*<div>兴趣爱好分享</div>*/}
