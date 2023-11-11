@@ -19,7 +19,7 @@ axios.interceptors.request.use(
 //axios响应拦截器
 axios.interceptors.response.use(
     res => {
-            return res.data
+            return res?.data
     }
 )
 export default axios
