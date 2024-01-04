@@ -4,13 +4,15 @@ import styles from '../styles/Home.module.css'
 import Insurance from "../src/component/Insurance/Insurance";
 import SuccessPanel from "../src/component/SuccessPanel/SuccessPannel";
 import Apply from "../src/component/Apply/Apply"
+import MotoHome  from "../src/view/MotoHome/MotoHome";
 import {useSelector} from "react-redux";
 import MTNetwork from "../src/network/MTNetwork";
 
 export async function getServerSideProps({ req, res }) {
     res.setHeader(
         'Cache-Control',
-        'no-cache, no-store, max-age=0, must-revalidate'
+        // 'no-cache, no-store, max-age=0, must-revalidate'
+        'no-cache'
         // 'public, s-maxage=10, stale-while-revalidate=59'
     )
     let DATA = await MTNetwork.getInsurance();
@@ -53,7 +55,7 @@ export default function Index(props) {
     let _judgeKeyboardState = () => {
         // 解决 andriod 软键盘打开-关闭后  造成网页高度被破坏
         const resizeHeight = document.body.clientHeight
-        var u = navigator.userAgent;
+        let u = navigator.userAgent;
         let isAndroid = u.indexOf("Android") > -1 || u.indexOf("Adr") > -1; //android终端
         if (isAndroid) {
             if (resizeHeight < originHeight.current) {
@@ -74,10 +76,12 @@ export default function Index(props) {
                 <meta name="baidu-site-verification" content="codeva-S1aaX4ALBY" />
                 <link rel="icon" href="/motosafe.svg"/>
             </Head>
-            <Insurance insuranceData={insuranceData}/>
-
+            {/*<Insurance insuranceData={insuranceData}/>*/}
+            <MotoHome/>
             {/*提交成功弹窗*/}
             {showSuccessPanel && <SuccessPanel/>}
+
+
             {/*<Apply/>*/}
         </div>
     )

@@ -1,0 +1,169 @@
+.bbox {
+  width: 100%;
+  height: 100%;
+}
+.top_box {
+  //margin-top: 40px;
+  margin: 0 auto;
+  height: 520px;
+  color: #fff;
+  border-radius: 4px;
+  text-align: center;
+  //background-color: #da713c;
+  background:linear-gradient(to right,#fbd786,#da713c);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .top_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .connect_img {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      img {
+        width: 130px;
+        height: 130px;
+      }
+    }
+    .info_fill {
+      position: absolute;
+      top: 20px;
+      //right: 30px;
+      left: 40px;
+      font-weight: bold;
+      cursor: pointer;
+      //color:#da713c;
+      color: #000;
+    }
+    .logo_img {
+      width: 400px;
+      height: 400px;
+    }
+    .info {
+      margin-left: 210px;
+    }
+  }
+  .look_for {
+    display: block;
+    text-align: center;
+    font-size: 65px;
+    font-weight: 700;
+    //line-height: 33px
+  }
+
+  .h_title {
+    font-size: 42px;
+    margin: 18px 0;
+  }
+
+  .select {
+    padding-top: 10px;
+    display: block;
+    text-align: center;
+  }
+
+  .desc {
+    padding: 4px 0 0 0;
+    margin: 0 auto;
+    display: block;
+    //width: 300px;
+    text-align: center;
+    font-size: 20px;
+    //color: rgba(255, 255, 255, 0.9);
+    .moto_Id {
+      color: #000;
+      font-weight: bold;
+    }
+  }
+}
+.list_box {
+  .list_item {
+    padding: 34px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .flex_reverse {
+    flex-direction: row-reverse;
+  }
+  .list_img {
+    width: 400px;
+    height: auto;
+  }
+  .space {
+    width: 50px;
+  }
+  .list_text {
+    width: 500px;
+    .title {
+      font-size: 25px;
+    }
+  }
+}
+.foot_box {
+  display: flex;
+  justify-content: center;
+  padding: 50px 0;
+  background-color: #000;
+  color: #fff;
+}
+
+@media screen and (max-width: 500px) {
+  .top_box {
+    padding: 130px 0 50px;
+    height: auto;
+    .top_content {
+      flex-direction: column;
+      .connect_img {
+        img {
+          width: 100px;
+          height: 100px;
+        }
+      }
+      .logo_img {
+        width: 90%;
+        height: auto;
+      }
+      .info {
+        margin-left: unset;
+      }
+    }
+    .look_for {
+      font-size: 36px;
+    }
+    .h_title {
+      font-size: 25px;
+      margin: 0;
+    }
+    .desc {
+      padding: 4px 0 0 0;
+      margin: 0 auto;
+      display: block;
+      text-align: center;
+      font-size: 18px;
+      .moto_Id {
+      }
+    }
+  }
+  .list_box {
+    .list_item {
+      flex-direction: column;
+    }
+    .flex_reverse {
+      //flex-direction: unset;
+    }
+    .list_img {
+      width: 90%;
+      height: auto;
+    }
+    .space {
+    }
+    .list_text {
+      width: 80%;
+      .title {
+      }
+    }
+  }
+}
