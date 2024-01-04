@@ -6,7 +6,21 @@ import ImgFive from '../../assets/moto_five.jpg'
 import ImgSix from '../../assets/ewm.jpg'
 import Image from "next/image"
 import classnames from 'classnames'
+import {useEffect} from "react";
+import MTNetwork from "../../network/MTNetwork";
 const MotoHome = ()=>{
+    useEffect(() => {
+        _addCount()
+    }, [])
+    let _addCount = () => {
+        try {
+            let userAgent = window.navigator.userAgent
+            let model = userAgent.match(/\(.*?\)/)[0]
+            MTNetwork.addCount({model})
+        } catch (error) {
+            console.log(error);
+        }
+    }
     const cardList = [
         {
             img:ImgOne,
