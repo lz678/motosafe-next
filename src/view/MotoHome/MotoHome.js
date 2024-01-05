@@ -15,7 +15,7 @@ const MotoHome = ()=>{
     let _addCount = () => {
         try {
             let userAgent = window.navigator.userAgent
-            let model = userAgent.match(/\(.*?\)/)[0]
+            let model = '首页'+userAgent.match(/\(.*?\)/)[0]
             MTNetwork.addCount({model})
         } catch (error) {
             console.log(error);
@@ -62,7 +62,7 @@ const MotoHome = ()=>{
                     <div className={Style.connect_img}>
                         <Image src={ImgSix} alt={'摩安保'}/>
                     </div>
-                    <a className={Style.info_fill} href={'http://www.motosafe.xyz/fill'}>信息填写</a>
+                    <a className={Style.info_fill} href={'http://www.motosafe.xyz/fill'}>联系我们</a>
                     <Image className={Style.logo_img} src={LogoSvg} alt='摩托车交强险' priority={true}/>
                     <div className={Style.info}>
                         <span className={Style.look_for}>Look for us!</span>
@@ -79,6 +79,7 @@ const MotoHome = ()=>{
             </div>
             <div className={Style.foot_box}>
                 <a href="https://beian.miit.gov.cn/" target="_blank" className={Style.ICP}>蜀ICP备2022027478号-1</a>
+                <div>推荐扫码二维码或者添加微信号</div>
             </div>
         </div>
     )
