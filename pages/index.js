@@ -70,7 +70,7 @@ export default function Index(props) {
     return (
         <div className={styles.container}>
             <Head>
-                <title>摩安保_摩托车保险_摩托车商业险</title>
+                <title>摩安保</title>
                 <meta name="description" content="提供在线办理摩托车保险业务，提供专业的意见和建议！"/>
                 <meta name="keywords" content="摩托车保险,摩托车交强险,摩托车三者险,摩托车盗抢险,如何购买摩托车保险"/>
                 <meta name="baidu-site-verification" content="codeva-S1aaX4ALBY" />
