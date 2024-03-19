@@ -72,15 +72,16 @@ export default function Index(props) {
             <Head>
                 <title>摩安保</title>
                 <meta name="description" content="提供在线办理摩托车保险业务，提供专业的意见和建议！"/>
-                <meta name="keywords" content="摩托车保险,摩托车交强险,摩托车三者险,摩托车盗抢险,如何购买摩托车保险"/>
+                <meta name="keywords" content="摩托车保险,摩托车三者险,摩托车盗抢险,如何购买摩托车保险"/>
                 <meta name="baidu-site-verification" content="codeva-S1aaX4ALBY" />
                 <link rel="icon" href="/motosafe.svg"/>
             </Head>
-            <MotoHome/>
 
-            {/*<Insurance insuranceData={insuranceData}/>*/}
+
+            <Insurance insuranceData={insuranceData}/>
             {/*提交成功弹窗*/}
-            {/*{showSuccessPanel && <SuccessPanel/>}*/}
+            {showSuccessPanel && <SuccessPanel/>}
+            <MotoHome/>
 
 
             {/*<Apply/>*/}

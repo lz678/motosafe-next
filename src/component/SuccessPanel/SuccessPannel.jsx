@@ -10,7 +10,8 @@ let SuccessPanel = () => {
         <div className={Style.panel_box}>
             <div className={Style.content}>
                 <span className={Style.text}>
-                    信息提交成功！工作人员会在短时间内联系您！
+                    <span className={Style.tip}> 信息提交成功！</span>
+                   客服会在短时间内联系您！<br/>添加微信号:<span style={{color:'#ff6412'}}>motosafe</span>更快捷！
                 </span>
                 <div className={Style.btn} onClick={_ok}>
                     确定

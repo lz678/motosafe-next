@@ -20,7 +20,6 @@ const Insurance = (props) => {
     let phoneRef = useRef(null)
     useEffect(() => {
         _addCount()
-        // _getInsuranceData()
     }, [])
     let _addCount = () => {
         try {
@@ -29,17 +28,6 @@ const Insurance = (props) => {
             MTNetwork.addCount({model})
         } catch (error) {
             console.log(error);
-        }
-    }
-    let _getInsuranceData = () => {
-        try {
-            MTNetwork.getInsurance().then((res) => {
-                let list = res.data
-                let curNum = list[0].num
-                setNum(curNum)
-            })
-        } catch (e) {
-            setNum(899)
         }
     }
     let _nameChange = (value) => {
@@ -94,8 +82,8 @@ const Insurance = (props) => {
     return (
         <div className={Style.home_box} id='home_box_id'>
             <div className={Style.left_content}>
-                <Image src={backgroundTwo} alt='摩托车保险' loading='lazy'/>
-                <a href="https://beian.miit.gov.cn/" target="_blank" className={Style.ICP}>蜀ICP备2022027478号-1</a>
+                <Image src={backgroundTwo} alt='摩安保' loading='lazy'/>
+                {/*<a href="https://beian.miit.gov.cn/" target="_blank" className={Style.ICP}>蜀ICP备2022027478号-1</a>*/}
             </div>
             <div className={Style.right_content}>
 
@@ -103,7 +91,7 @@ const Insurance = (props) => {
                     <span className={Style.look_for}>Look for us!</span>
                     <h1 className={Style.h_title}>专业摩托车保险</h1>
                     <span className={Style.desc}>
-                        我们将会为您提供办理摩托车保险的业务<br/>专人一对一服务 给出最专业意见和建议<br/>交强险  三者险  盗抢险  车损险<br/>
+                        摩托车保险一站式服务 行业最新资讯分享<br/>专人一对一服务 给出最专业意见和建议<br/>交强险  三者险  盗抢险<br/>
                         微信号：<span className={Style.one}>motosafe</span>
                     </span>
                 </div>

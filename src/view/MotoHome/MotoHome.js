@@ -25,7 +25,7 @@ const MotoHome = ()=>{
         {
             img:ImgOne,
             title:'摩托车交强险',
-            desc:'摩托车交强险是国家强制购买的。没有交强险是不能上路的。摩托车是机动车所以和汽车一样都要买交强险，交强险是指当被保险的摩托车发生道路交通事故造成他人的人身伤亡、财产损失时，保险公司给予对方赔偿，不保障自己车辆和人身损失。其次，交强险财产损失最高赔付两千。'
+            desc:'摩托车交强险是国家强制购买的。没有交强险是不能上路的。摩托车和汽车都是机动车，所以一样需要买交强险，交强险是指当被保险的摩托车发生道路交通事故造成他人的人身伤亡、财产损失时，保险公司给予对方赔偿，不保障自己车辆和人身损失。其次，交强险财产损失最高赔付两千。'
         },
         {
             img:LogoSvg,
@@ -57,29 +57,34 @@ const MotoHome = ()=>{
     }
     return (
         <div className={Style.bbox}>
-            <div className={Style.top_box}>
-                <div className={Style.top_content}>
-                    <div className={Style.connect_img}>
-                        <Image src={ImgSix} alt={'摩安保'}/>
-                    </div>
-                    <a className={Style.info_fill} href={'http://www.motosafe.xyz/fill'}>联系我们</a>
-                    <Image className={Style.logo_img} src={LogoSvg} alt='摩托车交强险' priority={true}/>
-                    <div className={Style.info}>
-                        <span className={Style.look_for}>Look for us!</span>
-                        <h1 className={Style.h_title}>专业摩托车保险</h1>
-                        <span className={Style.desc}>
-                        我们将会为您提供办理摩托车保险的业务<br/>专人一对一服务 给出最专业意见和建议<br/>交强险  三者险  盗抢险  车损险<br/>
-                        微信号：<span className={Style.moto_Id}>motosafe</span>
-                    </span>
-                    </div>
-                </div>
-            </div>
+            {/*<div className={Style.top_box}>*/}
+            {/*    <div className={Style.top_content}>*/}
+            {/*        <div className={Style.connect_img}>*/}
+            {/*            <Image src={ImgSix} alt={'摩安保'}/>*/}
+            {/*        </div>*/}
+            {/*        <a className={Style.info_fill} href={'http://www.motosafe.xyz/fill'}>提交信息</a>*/}
+            {/*        <Image className={Style.logo_img} src={LogoSvg} alt='摩托车交强险' priority={true}/>*/}
+            {/*        <div className={Style.info}>*/}
+            {/*            <span className={Style.look_for}>Look for us!</span>*/}
+            {/*            <h1 className={Style.h_title}>专业摩托车保险</h1>*/}
+            {/*            <span className={Style.desc}>*/}
+            {/*            我们将会为您提供办理摩托车保险的业务<br/>专人一对一服务 给出最专业意见和建议<br/>交强险  三者险  盗抢险<br/>*/}
+            {/*            微信号：<span className={Style.moto_Id}>motosafe</span>*/}
+            {/*        </span>*/}
+            {/*        </div>*/}
+            {/*    </div>*/}
+            {/*</div>*/}
             <div className={Style.list_box}>
                 {_drawList()}
             </div>
             <div className={Style.foot_box}>
-                <a href="https://beian.miit.gov.cn/" target="_blank" className={Style.ICP}>蜀ICP备2022027478号-1</a>
-                <div>推荐扫码二维码或者添加微信号</div>
+                <div className={Style.desc}>
+                    <a href="https://beian.miit.gov.cn/" target="_blank">蜀ICP备2022027478号-1</a>
+                    <div>推荐扫码二维码或者添加微信号</div>
+                </div>
+                <div className={Style.foot_connect_img}>
+                    <Image src={ImgSix} width={90} height={90} alt={'摩安保'}/>
+                </div>
             </div>
         </div>
     )
