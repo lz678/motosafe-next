@@ -5,6 +5,7 @@ import MTNetwork from "../../network/MTNetwork";
 import {useDispatch} from 'react-redux'
 import mainAction from '../../redux/action/mainAction'
 import backgroundTwo from '../../assets/moto_two.webp'
+import downSvg from '../../assets/down.svg'
 import Image from 'next/image'
 
 const Insurance = (props) => {
@@ -81,12 +82,17 @@ const Insurance = (props) => {
     }
     return (
         <div className={Style.home_box} id='home_box_id'>
+            <svg t="1710943974309" className={Style.icon} viewBox="0 0 1024 1024" version="1.1"
+                 xmlns="http://www.w3.org/2000/svg" p-id="2508">
+                <path
+                    d="M225.834667 268.501333a42.666667 42.666667 0 0 1 60.330666 0L512 494.336l225.834667-225.834667a42.666667 42.666667 0 1 1 60.330666 60.330667l-256 256a42.666667 42.666667 0 0 1-60.330666 0l-256-256a42.666667 42.666667 0 0 1 0-60.330667z m0 256a42.666667 42.666667 0 0 1 60.330666 0L512 750.336l225.834667-225.834667a42.666667 42.666667 0 1 1 60.330666 60.330667l-256 256a42.666667 42.666667 0 0 1-60.330666 0l-256-256a42.666667 42.666667 0 0 1 0-60.330667z"
+                    fill="#ffffff" p-id="2509"></path>
+            </svg>
             <div className={Style.left_content}>
                 <Image src={backgroundTwo} alt='摩安保' loading='lazy'/>
                 {/*<a href="https://beian.miit.gov.cn/" target="_blank" className={Style.ICP}>蜀ICP备2022027478号-1</a>*/}
             </div>
             <div className={Style.right_content}>
-
                 <div className={Style.introduce_box}>
                     <span className={Style.look_for}>Look for us!</span>
                     <h1 className={Style.h_title}>专业摩托车保险</h1>
