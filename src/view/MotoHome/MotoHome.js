@@ -6,8 +6,6 @@ import ImgFive from '../../assets/moto_five.jpg'
 import ImgSix from '../../assets/ewm.jpg'
 import Image from "next/image"
 import classnames from 'classnames'
-import {useEffect} from "react";
-import MTNetwork from "../../network/MTNetwork";
 const MotoHome = ()=>{
     const cardList = [
         {
@@ -68,11 +66,11 @@ const MotoHome = ()=>{
             <div className={Style.foot_box}>
                 <div className={Style.desc}>
                     <a href="https://beian.miit.gov.cn/" target="_blank">蜀ICP备2022027478号-1</a>
-                    <div>推荐扫码二维码或者添加微信号</div>
+                    {/*<div>推荐扫码二维码或者添加微信号</div>*/}
                 </div>
-                <div className={Style.foot_connect_img}>
-                    <Image src={ImgSix} width={90} height={90} alt={'摩安保'}/>
-                </div>
+                {/*<div className={Style.foot_connect_img}>*/}
+                {/*    <Image src={ImgSix} width={90} height={90} alt={'摩安保'}/>*/}
+                {/*</div>*/}
             </div>
         </div>
     )

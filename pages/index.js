@@ -7,6 +7,7 @@ import Apply from "../src/component/Apply/Apply"
 import MotoHome  from "../src/view/MotoHome/MotoHome";
 import {useSelector} from "react-redux";
 import MTNetwork from "../src/network/MTNetwork";
+import Tool from "../src/component/Tool/Tool";
 
 export async function getServerSideProps({ req, res }) {
     res.setHeader(
@@ -83,6 +84,8 @@ export default function Index(props) {
             {showSuccessPanel && <SuccessPanel/>}
             <MotoHome/>
 
+
+            {/*<Tool/>*/}
             {/*<Apply/>*/}
         </div>
     )

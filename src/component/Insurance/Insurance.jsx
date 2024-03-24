@@ -5,7 +5,7 @@ import MTNetwork from "../../network/MTNetwork";
 import {useDispatch} from 'react-redux'
 import mainAction from '../../redux/action/mainAction'
 import backgroundTwo from '../../assets/moto_two.webp'
-import downSvg from '../../assets/down.svg'
+import wechatSvg from '../../assets/wechat2.svg'
 import Image from 'next/image'
 
 const Insurance = (props) => {
@@ -98,8 +98,13 @@ const Insurance = (props) => {
                     <h1 className={Style.h_title}>专业摩托车保险</h1>
                     <span className={Style.desc}>
                         摩托车保险一站式服务 行业最新资讯分享<br/>专人一对一服务 给出最专业意见和建议<br/>交强险  三者险  盗抢险<br/>
-                        微信号：<span className={Style.one}>motosafe</span>
+                        {/*微信号：<span className={Style.one}>motosafe</span>*/}
                     </span>
+                    <div className={Style.wechat_bx}>
+                        <Image src={wechatSvg} className={Style.wechat} alt={'摩安保'}/>
+                        {/*<span className={Style.one}>motosafe</span>*/}
+                        <div className={Style.text}>motosafe</div>
+                    </div>
                 </div>
 
                 <div className={Style.input_content}>
