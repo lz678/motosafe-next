@@ -90,7 +90,7 @@ const Insurance = (props) => {
             </svg>
             <div className={Style.left_content}>
                 <Image src={backgroundTwo} alt='摩安保' loading='lazy'/>
-                {/*<a href="https://beian.miit.gov.cn/" target="_blank" className={Style.ICP}>蜀ICP备2022027478号-1</a>*/}
+                <a href="https://www.58moto.com/ranks/car/0/index.html?tabType=hot" target="_blank" className={Style.leaderoard}>车型榜</a>
             </div>
             <div className={Style.right_content}>
                 <div className={Style.introduce_box}>
