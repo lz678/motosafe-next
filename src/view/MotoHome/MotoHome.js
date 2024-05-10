@@ -65,7 +65,8 @@ const MotoHome = ()=>{
             </div>
             <div className={Style.foot_box}>
                 <div className={Style.desc}>
-                    <a href="https://beian.miit.gov.cn/" target="_blank">蜀ICP备2022027478号-1</a>
+                    <div>成都摩安保信息技术有限公司</div>
+                    <a href="https://beian.miit.gov.cn/" target="_blank">蜀ICP备2024075698号-1</a>
                     {/*<div>推荐扫码二维码或者添加微信号</div>*/}
                 </div>
                 {/*<div className={Style.foot_connect_img}>*/}
