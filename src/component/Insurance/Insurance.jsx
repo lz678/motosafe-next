@@ -95,9 +95,9 @@ const Insurance = (props) => {
             <div className={Style.right_content}>
                 <div className={Style.introduce_box}>
                     <span className={Style.look_for}>Look for us!</span>
-                    <h1 className={Style.h_title}>专业摩托车保险</h1>
+                    <h1 className={Style.h_title}>摩安保</h1>
                     <span className={Style.desc}>
-                        摩托车保险一站式服务 行业最新资讯分享<br/>专人一对一服务 给出最专业意见和建议<br/>交强险  三者险  盗抢险<br/>
+                        摩托车一站式服务 行业最新资讯分享<br/>专人一对一服务 给出最专业意见和建议<br/>交强  三者  盗抢保障<br/>
                         {/*微信号：<span className={Style.one}>motosafe</span>*/}
                     </span>
                     <div className={Style.wechat_bx}>

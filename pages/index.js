@@ -72,7 +72,7 @@ export default function Index(props) {
         <div className={styles.container}>
             <Head>
                 <title>摩安保_摩托车一站式服务</title>
-                <meta name="description" content="摩托车保险一站式服务，提供专业的意见和建议！"/>
+                <meta name="description" content="摩托车一站式服务，提供专业的意见和建议！"/>
                 <meta name="keywords" content="摩托车保险,摩托车三者险,摩托车盗抢险,如何购买摩托车保险"/>
                 <meta name="baidu-site-verification" content="codeva-S1aaX4ALBY" />
                 <meta name="360-site-verification" content="974d4837630e58def3d80b4ac100ca2f" />
